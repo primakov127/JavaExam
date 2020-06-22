@@ -10,6 +10,7 @@ public class Auction {
 
     private ArrayList<Bid> bids;
     private CyclicBarrier barrier;
+    // Constant which define count of bids
     public final int BIDS_COUNT = 5;
 
     public Auction() {
@@ -18,7 +19,11 @@ public class Auction {
                 (this.BIDS_COUNT, new Runnable() {
                     @Override
                     public void run() {
-
+                        Bid winner = Auction.this.defineWinner();
+                        System.out.println("Ставка #" +
+                                winner.getBidId() +
+                                ", цена: " + winner.getPrice() +
+                                " победил!");
                     }
                 });
     }

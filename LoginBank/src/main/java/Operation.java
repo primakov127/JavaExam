@@ -1,3 +1,6 @@
+import org.apache.log4j.Logger;
+
+import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -6,6 +9,8 @@ import java.io.IOException;
 import java.sql.*;
 
 public class Operation extends HttpServlet {
+
+    private static final Logger LOGGER = Logger.getLogger(Servlet.class);
 
     String hostName = "primakov.database.windows.net";
     String dbName = "JavaLab";
@@ -36,6 +41,7 @@ public class Operation extends HttpServlet {
 
             if (balance >= amount) {
                 statement.executeUpdate("UPDATE Users SET [balance] = " + (balance - amount) + " WHERE [login] = " + "'" + login + "'");
+                LOGGER.info(new java.util.Date().toString() + " " + login + " took " + amount + ". Balance: " + (balance - amount));
             }
 
             resp.sendRedirect(req.getContextPath() + "/operation.jsp");

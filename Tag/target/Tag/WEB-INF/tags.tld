@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>MyTags</short-name>
+
+    <tag>
+        <name>TagPasport</name>
+        <tag-class>Tags.Passport</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>myPasport</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>Table</name>
+        <tag-class>Tags.Table</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>objects</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>sum</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+    </tag>
+
+
+    <tag>
+        <name>Submit</name>
+        <tag-class>Tags.Submit</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>label</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>LabledTextField</name>
+        <tag-class>Tags.LabledTextField</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>label</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>TagDay</name>
+        <tag-class>Tags.Day</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>myDay</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>myMonth</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>myYear</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>CreateTable</name>
+        <tag-class>Tags.CreateTable</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>myRow</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>myCol</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+</taglib>
